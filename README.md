@@ -1,6 +1,6 @@
 # Qt5 Basic Calculator
 
-Basic Calculator as an exercise for Python Software Development course.
+Basic Calculator is an exercise for Python Software Development course.
 
 ## Installation
 
