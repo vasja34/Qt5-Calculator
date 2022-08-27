@@ -13,12 +13,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        """
+        It sets up the GUI for the calculator.
+
+        :param MainWindow: the main window
+        """
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(338, 395)
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap("pyshine.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off
-        )
+        # icon.addPixmap(
+        #     QtGui.QPixmap("x.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        # )
         MainWindow.setWindowIcon(icon)
         self.mw = MainWindow
 
@@ -111,9 +116,9 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionNew = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap("pyshine.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off
-        )
+        # icon.addPixmap(
+        #     QtGui.QPixmap("x.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        # )
         self.actionNew.setIcon(icon)
         self.actionNew.setObjectName("actionNew")
         self.actionExit = QtWidgets.QAction(MainWindow)
@@ -161,6 +166,10 @@ class Ui_MainWindow(object):
         self.processed = False
 
     def process(self):
+        """
+        It takes the text of the button, removes all periods that aren't followed by a number, evaluates
+        the result, and then sets the text of the button to the result
+        """
         try:
             inp = self.text
             inp = re.sub(r"\.(?![0-9])", "", inp)
@@ -171,6 +180,11 @@ class Ui_MainWindow(object):
         self.processed = True
 
     def show(self):
+        """
+        It takes the text from the textEdit widget, and depending on the button pressed, it will either
+        add the text from the button to the textEdit widget, or it will perform a calculation on the
+        text in the textEdit widget.
+        """
         self.textEdit.setFontPointSize(24)
         self.text = self.textEdit.toPlainText()
 
@@ -223,9 +237,14 @@ class Ui_MainWindow(object):
         self.textEdit.setText(self.text)
 
     def retranslateUi(self, MainWindow):
+        """
+        It translates the text of the buttons and other widgets to the language of the user's choice
+
+        :param MainWindow: The name of the window
+        """
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton_22.setText(_translate("PyShine Calculator", "%"))
+        self.pushButton_22.setText(_translate("Calculator", "%"))
         self.pushButton_22.setShortcut(_translate("MainWindow", "%"))
         self.pushButton_19.setText(_translate("MainWindow", "x^3"))
         self.pushButton_23.setText(_translate("MainWindow", "AC"))
@@ -270,7 +289,7 @@ class Ui_MainWindow(object):
         self.pushButton_15.setShortcut(_translate("MainWindow", "Return"))
         self.pushButton_18.setText(_translate("MainWindow", "Backspace"))
         self.pushButton_18.setShortcut(_translate("MainWindow", "Backspace"))
-        self.statusbar.setStatusTip(_translate("MainWindow", "Pyshine"))
+        self.statusbar.setStatusTip(_translate("MainWindow", ""))
         self.actionNew.setText(_translate("MainWindow", "New"))
         self.actionExit.setText(_translate("MainWindow", "Exit"))
         self.actionitem1.setText(_translate("MainWindow", "item1"))

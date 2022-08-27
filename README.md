@@ -1,9 +1,31 @@
 # Qt5 Basic Calculator
 
- Basic Calculator as an exercise for Python Software Development course.
+Basic Calculator as an exercise for Python Software Development course.
 
-## Running cmd:
-Make sure you have PyQt5 installed
-`pip install --upgrade PyQt5`
+## Installation
 
-Then run `python "C:/Users/User/Qt5-Calculator/main_calc.py"`
+There is none :) just download the files from a release and run it.
+
+## Requirements
+
+```shell
+pip install --upgrade PyQt5
+```
+
+## Run
+
+```shell
+$ python main_calc.py
+```
+
+## Screenshots
+
+![Chat Client](screenshots/main_window.png?raw=true)
+
+## Author
+
+Vadim M - vasja34@gmail.com
+
+## License
+
+This software is licensed under the [MIT](LICENSE) License.
