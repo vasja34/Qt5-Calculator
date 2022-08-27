@@ -20,7 +20,7 @@ $ python main_calc.py
 
 ## Screenshots
 
-![Chat Client](screenshots/main_window.png?raw=true)
+![Chat Client](screenshots/main_window.jpg?raw=true)
 
 ## Author
 
